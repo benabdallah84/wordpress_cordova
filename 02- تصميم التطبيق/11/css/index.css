@@ -1,0 +1,69 @@
+#mainPage {
+    background-color: #eee
+}
+
+.card {
+    border-bottom: 1px red solid;
+    direction: rtl;
+}
+
+.collection {
+    direction: rtl;
+    padding: 0px;
+}
+
+.collection-item>h5 {
+    color: green;
+}
+
+.addCommentDiv {
+    width: 100%;
+    text-align: center;
+}
+
+.btn {
+    color: white !important;
+    background-color: #d32f2f !important;
+}
+
+.addCommBu {
+    text-align: center;
+}
+
+.ui-input-text,
+.ui-input-search {
+    border-style: none !important;
+}
+
+.ui-content {
+    padding: 0px !important;
+}
+
+.ui-content .collection {
+    border: none;
+    border-bottom: 1px solid #d32f2f;
+}
+
+.goto {
+    float: left
+}
+
+#tags {
+    margin-top: 20px;
+    border: 2px solid #d32f2f;
+    padding: 10px;
+    font-family: Arial;
+    width: 100%;
+    text-align: center;
+    background-color: wheat
+}
+
+#tags span.tag {
+    color: #fff;
+    background: #689;
+    padding: 5px 10px;
+    margin: 4px;
+    text-align: center;
+    border-radius: 5px;
+	display: inline-block;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<!-- JQuery Mobile CSS -->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="css/materialize.min.css">
+
+		
+		<!-- JQuery JavaScript -->
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<!-- JQuery Mobile JavaScript -->
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="js/materialize.min.js"></script>
+          
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <title></title>
+    </head>
+    <body>   
+		<div data-role="page" id="mainPage">
+			<div class="red darken-2" data-role="header">
+				<h1 class="white-text">الصفحة الرئيسية</h1>
+		    </div>
+			
+			<div data-role="main" class="ui-content">
+				
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <img class="activator" src="http://lorempixel.com/400/200/">
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Card Title</span>
+					  <p class="truncate">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+					  <p><a href="#newsPage" data-transition="flow">This is a link</a></p>
+					</div>
+				</div>
+				
+			</div>
+		</div> 
+
+		<div data-role="page" id="newsPage">
+			News Page
+			<a href="#categoryPage" data-transition="flow">Go to Category Page</a>
+		</div>
+		
+		<div data-role="page" id="categoryPage">
+			Category Page
+			<a href="#mainPage" data-transition="flow">Go to Main Page</a>
+		</div>
+    </body>
+</html>

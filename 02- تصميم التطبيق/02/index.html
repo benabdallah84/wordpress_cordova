@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<!-- JQuery Mobile CSS -->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="css/materialize.min.css">
+
+		
+		<!-- JQuery JavaScript -->
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<!-- JQuery Mobile JavaScript -->
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="js/materialize.min.js"></script>
+          
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <title></title>
+    </head>
+    <body>   
+		<div data-role="page" id="mainPage">
+			Main Page
+			<a href="#newsPage" data-transition="flow">Go to News Page</a>
+		</div> 
+
+		<div data-role="page" id="newsPage">
+			News Page
+			<a href="#categoryPage" data-transition="flow">Go to Category Page</a>
+		</div>
+		
+		<div data-role="page" id="categoryPage">
+			Category Page
+			<a href="#mainPage" data-transition="flow">Go to Main Page</a>
+		</div>
+    </body>
+</html>

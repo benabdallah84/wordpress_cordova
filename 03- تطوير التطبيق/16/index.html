@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- JQuery Mobile CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+
+
+    <!-- JQuery JavaScript -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- JQuery Mobile JavaScript <-->
+    </-->
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <div data-role="page" id="mainPage">
+
+        <div class="menu" data-role="panel" id="mainPagePanel" display="push" data-position="right">
+            <div class="collection">
+                <a href="#mainPage" class="collection-item">الصفحة الرئيسية</a>
+                <a href="#categoryPage" onclick="getCategories()" class="collection-item">التصنيفات</a>
+                <a href="#loginPage" class="collection-item loginPageLink">تسجيل الدخول</a>
+                <a style="display:none" onclick="logout()" href="#mainPage" class="collection-item logoutLink">تسجيل الخروج</a>
+            </div>
+        </div>
+
+        <div class="red darken-2" data-role="header">
+            <a id="menu_button" href="#mainPagePanel">=</a>
+            <h1 class="white-text">الصفحة الرئيسية</h1>
+        </div>
+
+        <div id="main_page" data-role="main" class="ui-content">
+
+        </div>
+    </div>
+
+    <div data-role="page" id="newsPage">
+
+        <div class="menu" data-role="panel" id="newsPagePanel" display="push" data-position="right">
+            <div class="collection">
+                <a href="#mainPage" class="collection-item">الصفحة الرئيسية</a>
+                <a href="#categoryPage" onclick="getCategories()" class="collection-item">التصنيفات</a>
+                <a href="#loginPage" class="collection-item loginPageLink">تسجيل الدخول</a>
+                <a style="display:none" onclick="logout()" href="#mainPage" class="collection-item logoutLink">تسجيل الخروج</a>
+            </div>
+        </div>
+
+        <div class="red darken-2" data-role="header">
+            <a id="menu_button" href="#newsPagePanel">=</a>
+            <h1 id="page2Title1" class="white-text">صفحة الخبر</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img id="page2Image" class="activator" src="#">
+                </div>
+                <div class="card-content">
+                    <span id="page2Title2" class="card-title activator grey-text text-darken-4"></span>
+                    <p id="page2Text"></p>
+                </div>
+            </div>
+
+            <ul class="collection" id="allComments">
+
+            </ul>
+            <div class="addCommentDiv">
+                <a href="#postCommentPage" data-transition="pop" class="waves-effect waves-light btn">أضف تعليقاً</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div data-role="page" id="postCommentPage">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="commentText" class="materialize-textarea"></textarea>
+                        <label for="textarea1">التعليق</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="commenterName" type="text" class="validate">
+                        <label for="name">الاسم</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="commenterEmail" type="email" class="validate">
+                        <label for="email">الإيميل</label>
+                    </div>
+                </div>
+                <div class="row addCommBu">
+                    <a href="#newsPage" data-transition="pop" class="waves-effect waves-light btn">إلغاء</a>
+                    <a href="#" onclick="addComment()" data-transition="pop" class="waves-effect waves-light btn">إرسال</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div data-role="page" id="categoryPage">
+
+        <div class="menu" data-role="panel" id="categoryPagePanel" display="push" data-position="right">
+            <div class="collection">
+                <a href="#mainPage" class="collection-item">الصفحة الرئيسية</a>
+                <a href="#categoryPage" class="collection-item">التصنيفات</a>
+            </div>
+        </div>
+
+        <div class="red darken-2" data-role="header">
+            <a id="menu_button" href="#categoryPagePanel">=</a>
+            <h1 class="white-text">جميع التصنيفات</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div id="allCategories" class="collection">
+
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="catNewsPage">
+
+        <div class="menu" data-role="panel" id="catNewsPagePanel" display="push" data-position="right">
+            <div class="collection">
+                <a href="#mainPage" class="collection-item">الصفحة الرئيسية</a>
+                <a href="#categoryPage" onclick="getCategories()" class="collection-item">التصنيفات</a>
+                <a href="#loginPage" class="collection-item loginPageLink">تسجيل الدخول</a>
+                <a style="display:none" onclick="logout()" href="#mainPage" class="collection-item logoutLink">تسجيل الخروج</a>
+            </div>
+        </div>
+
+        <div class="red darken-2" data-role="header">
+            <a id="menu_button" href="#catNewsPagePanel">=</a>
+            <h1 id="catNewsHeader" class="white-text">اسم التصنيف</h1>
+        </div>
+
+        <div id="catNewsContent" data-role="main" class="ui-content">
+
+        </div>
+    </div>
+
+    <div data-role="page" id="loginPage">
+        <div class="row">
+            <br/>
+            <form class="col s12" style="text-align: right">
+                <div class="row">
+                    <div class="col s12">
+                        <label for="username">اسم المستخدم</label>
+                        <input id="username" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <label for="password">كلمة المرور </label>
+                        <input id="password" type="password" class="validate">
+                    </div>
+                </div>
+                <div class="row" style="text-align: center">
+                    <a href="#" onclick="login()" data-transition="pop" class="waves-effect waves-light btn">تسجيل دخول</a>
+                </div>
+                <div class="row">
+                    <div class="col s12" style="text-align: center;">
+                        <label style="display:none; color:crimson" id="errorMessage">اسم المستخدم او كلمة المرور غير صحيحة</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

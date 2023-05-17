@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- JQuery Mobile CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+
+
+    <!-- JQuery JavaScript -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- JQuery Mobile JavaScript -->
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <div data-role="page" id="mainPage">
+        <div class="menu" data-role="panel" id="mainPagePanel" display="push" data-position="right">
+            <div class="collection">
+                <a href="#mainPage" class="collection-item">الصفحة الرئيسية</a>
+                <a href="#categoryPage" onclick="getCategories()" class="collection-item">التصنيفات</a>
+                <a href="#tagsPage" onclick="getAllTags()" class="collection-item">الأوسمة</a>
+            </div>
+        </div>
+        <div class="red darken-2" data-role="header">
+            <a id="menu_button" href="#mainPagePanel">=</a>
+            <h1 class="white-text">الصفحة الرئيسية</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="http://lorempixel.com/400/200/">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">عنوان الخبر</span>
+                    <p class="truncate">في هذا المكان سنقوم بكتابة نص الخبر كاملاً, وسيتم جلب هذا النص من خلال الووردبريس ووضعه في التطبيق وسيتغير الخبر الظاهر هنا إذا تغير هناك.</p>
+                    <p><a href="#newsPage" data-transition="flow">اقرأ الخبر</a></p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div data-role="page" id="newsPage">
+        <div class="menu" data-role="panel" id="newsPagePanel" display="push" data-position="right">
+            <div class="collection">
+                <a href="#mainPage" class="collection-item">الصفحة الرئيسية</a>
+                <a href="#categoryPage" onclick="getCategories()" class="collection-item">التصنيفات</a>
+                <a href="#tagsPage" onclick="getAllTags()" class="collection-item">الأوسمة</a>
+            </div>
+        </div>
+        <div class="red darken-2" data-role="header">
+            <a id="menu_button" href="#newsPagePanel">=</a>
+            <h1 class="white-text">صفحة الخبر</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="http://lorempixel.com/400/200/">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"></span>
+                    <p></p>
+                </div>
+            </div>
+
+            <ul class="collection">
+              
+            </ul>
+            <div class="addCommentDiv">
+                <a href="#postCommentPage" data-transition="pop" class="waves-effect waves-light btn">أضف تعليقاً</a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div data-role="page" id="postCommentPage">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">التعليق</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">الاسم</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">الإيميل</label>
+                    </div>
+                </div>
+                <div class="row addCommBu">
+                    <a href="#newsPage" data-transition="pop" class="waves-effect waves-light btn">إلغاء</a>
+                    <a href="#newsPage" data-transition="pop" class="waves-effect waves-light btn">إرسال</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div data-role="page" id="categoryPage">
+        <div class="menu" data-role="panel" id="categoryPagePanel" display="push" data-position="right">
+            <div class="collection">
+                <a href="#mainPage" class="collection-item">الصفحة الرئيسية</a>
+                <a href="#categoryPage" onclick="getCategories()" class="collection-item">التصنيفات</a>
+                <a href="#tagsPage" onclick="getAllTags()" class="collection-item">الأوسمة</a>
+            </div>
+        </div>
+        <div class="red darken-2" data-role="header">
+            <a id="menu_button" href="#categoryPagePanel">=</a>
+            <h1 class="white-text">جميع التصنيفات</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="collection">
+                
+            </div>
+        </div>
+    </div>
+
+	 <div data-role="page" id="catNewsPage">
+
+        <div class="menu" data-role="panel" id="catNewsPagePanel" display="push" data-position="right">
+            <div class="collection">
+                <a href="#mainPage" class="collection-item">الصفحة الرئيسية</a>
+                <a href="#categoryPage" onclick="getCategories()" class="collection-item">التصنيفات</a>
+				<a href="#tagsPage" onclick="getAllTags()" class="collection-item">الأوسمة</a>
+            </div>
+        </div>
+
+        <div class="red darken-2" data-role="header">
+            <a id="menu_button" href="#catNewsPagePanel">=</a>
+            <h1 id="catNewsHeader" class="white-text">اسم التصنيف</h1>
+        </div>
+
+        <div id="catNewsContent" data-role="main" class="ui-content">
+
+        </div>
+    </div>
+
+    <div data-role="page" id="tagsPage">
+        <div class="menu" data-role="panel" id="tagsPagePanel" display="push" data-position="right">
+            <div class="collection">
+                <a href="#mainPage" class="collection-item">الصفحة الرئيسية</a>
+                <a href="#categoryPage" onclick="getCategories()" class="collection-item">التصنيفات</a>
+                <a href="#tagsPage" onclick="getAllTags()" class="collection-item">الأوسمة</a>
+            </div>
+        </div>
+        <div class="red darken-2" data-role="header">
+            <a id="menu_button" href="#tagsPagePanel">=</a>
+            <h1 class="white-text">جميع الأوسمة</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div id="tags" style="float: right;">
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
